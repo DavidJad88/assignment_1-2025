@@ -1,13 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/variables.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/header.css" />
+    <link rel="stylesheet" href="./src/css/displayContainer.css" />
+    <link rel="stylesheet" href="./src/css/footer.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Swapi Project</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header>
+      <div class="header__image-container"></div>
+
+      <nav class="navbar">
+        <ul class="navbar__links-container">
+          <li class="navbar-link" id="people">People</li>
+          <li class="navbar-link" id="films">Films</li>
+          <li class="navbar-link" id="vehicles">Vehicles</li>
+          <li class="navbar-link" id="planets">Planets</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <ul class="display-container">
+        <!-- <li class="display-card">
+          <div class="card__image-container"></div>
+          <div class="card__content-container">
+            <div>
+              <p>name of param</p>
+              <p>reference</p>
+            </div>
+            <div>
+              <p>name of param</p>
+              <p>reference</p>
+            </div>
+            <div>
+              <p>name of param</p>
+              <p>reference</p>
+            </div>
+            <div>
+              <p>name of param</p>
+              <p>reference</p>
+            </div>
+            <div>
+              <p>name of param</p>
+              <p>reference</p>
+            </div>
+            <div>
+              <p>name of param</p>
+              <p>reference</p>
+            </div>
+          </div>
+        </li> -->
+      </ul>
+    </main>
+    <footer>
+      <div></div>
+      <div></div>
+    </footer>
+    <script type="module" src="./src/js/app.js"></script>
   </body>
 </html>
