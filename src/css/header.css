@@ -37,6 +37,7 @@ header {
 
 .navbar-link {
   color: var(--text-color-light);
+  cursor: pointer;
 }
 
 .navbar-link--active {
