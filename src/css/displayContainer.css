@@ -12,15 +12,26 @@
 
 .display-card {
   background-color: whitesmoke;
-  height: 400px;
+  height: 600px;
   display: flex;
   flex-direction: column;
+  border: 2px solid var(--text-color-light);
 
   border-radius: var(--border-radius-medium);
 }
 
 .card__image-container {
   flex-basis: 60%;
+  max-height: 60%;
+}
+
+.card__image-container img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  display: block;
+  background-color: var(--color-background-dark);
 }
 
 .card__content-container {
@@ -30,10 +41,20 @@
   align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
   padding: var(--spacing-medium);
+  background-color: var(--color-background-dark);
 }
 
 .card__content-container div {
   display: flex;
   flex-direction: column;
   text-align: center;
+  color: var(--text-color-light);
+}
+
+.description-container {
+  gap: var(--spacing-small);
+}
+
+.description-container h3 {
+  color: var(--text-color-yellow);
 }
