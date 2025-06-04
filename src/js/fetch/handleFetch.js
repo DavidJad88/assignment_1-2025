@@ -6,7 +6,7 @@ import renderPlanets from "../render/renderPlanets";
 
 const displayContainer = document.querySelector(".display-container");
 
-const handlefetch = async (fetchParameter) => {
+const handlefetch = async (fetchParameter = "films") => {
   displayContainer.innerHTML = "";
   if (fetchParameter === "films") {
     const dataToRender = await fetchData(fetchParameter);

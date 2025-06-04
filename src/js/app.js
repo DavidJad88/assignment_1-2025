@@ -1,5 +1,5 @@
 import handleFetch from "./fetch/handleFetch.js";
-//calling elements
+handleFetch();
 
 const links = document.querySelectorAll(".navbar-link");
 

@@ -2,7 +2,9 @@ header {
   width: 100%;
   /* max-width: 1200px; */
   min-height: 124px;
+  height: auto;
   display: flex;
+
   justify-content: center;
   align-items: center;
   gap: var(--spacing-medium);
@@ -18,7 +20,7 @@ header {
   background-position: var(--spacing-large);
   background-repeat: no-repeat;
   background-size: contain;
-  max-width: 600px;
+  max-width: 300px;
 }
 
 .navbar {
@@ -47,4 +49,26 @@ header {
 
 .navbar-link--active {
   color: var(--text-color-yellow);
+}
+
+@media screen and (max-width: 524px) {
+  header {
+    flex-direction: column;
+    height: 200px;
+  }
+
+  .header__image-container {
+    width: 100%;
+    height: 50px;
+
+    background-position: center;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 50%;
+  }
+  .navbar__links-container {
+    justify-content: center;
+  }
 }
