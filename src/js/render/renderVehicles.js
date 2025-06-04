@@ -47,17 +47,17 @@ const renderVehicles = (vehicles) => {
     speedHeader.textContent = "Top Speed";
 
     const nameDescription = document.createElement("p");
-    nameDescription.textContent = vehicle.name;
+    nameDescription.textContent = vehicle.name || "N/A";
     const modelDescription = document.createElement("p");
-    modelDescription.textContent = vehicle.model;
+    modelDescription.textContent = vehicle.model || "N/A";
     const manufacturerDescription = document.createElement("p");
-    manufacturerDescription.textContent = vehicle.manufacturer;
+    manufacturerDescription.textContent = vehicle.manufacturer || "N/A";
     const crewDescription = document.createElement("p");
-    crewDescription.textContent = vehicle.crew;
+    crewDescription.textContent = vehicle.crew || "N/A";
     const passengerDescription = document.createElement("p");
-    passengerDescription.textContent = vehicle.passengers;
-    const speedDescription = document.createElement("p");
-    speedDescription.textContent = vehicle.max_atmosphering_speed;
+    passengerDescription.textContent = vehicle.passengers || "N/A";
+    const speedDescription = document.createElement("p") || "N/A";
+    speedDescription.textContent = vehicle.max_atmosphering_speed || "N/A";
 
     //applying classes
     card.classList.add("display-card");

@@ -1,9 +1,9 @@
 header {
   width: 100%;
-
+  /* max-width: 1200px; */
   min-height: 124px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   gap: var(--spacing-medium);
   padding: 0, var(--spacing-large);
@@ -11,28 +11,33 @@ header {
 }
 
 .header__image-container {
-  flex-basis: 25%;
+  width: 50%;
   height: 50%;
+  display: flex;
   background-image: url("/assets/images/header-main-logo.png");
-  background-position: center;
+  background-position: var(--spacing-large);
   background-repeat: no-repeat;
   background-size: contain;
+  max-width: 600px;
 }
 
 .navbar {
-  flex-basis: 75%;
+  display: flex;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
+  max-width: 600px;
 }
 
 .navbar__links-container {
   width: 100%;
   height: inherit;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   gap: var(--spacing-large);
+  padding: var(--spacing-large);
 }
 
 .navbar-link {

@@ -5,7 +5,8 @@ const renderFilms = (films) => {
   console.log(films);
 
   films.forEach((film) => {
-    const filmImage = filmImageArray.find((img) => img.id === film.episode_id);
+    const filmId = Number(film.uid || film.episode_id);
+    const filmImage = filmImageArray.find((img) => img.id === filmId);
     //creating elements
 
     const card = document.createElement("li");
@@ -16,7 +17,9 @@ const renderFilms = (films) => {
     cardImage.src = filmImage.imageUrl;
     cardImage.alt = film.name;
 
-    const yearAndDate = new Date(film.release_date);
+    const yearAndDate = new Date(
+      film.release_date || film.properties.release_date
+    );
     const formattedDate = yearAndDate.toLocaleString("en-us", {
       month: "short",
       day: "2-digit",
@@ -48,15 +51,16 @@ const renderFilms = (films) => {
     episodeHeader.textContent = "Episode #";
 
     const titleDescription = document.createElement("p");
-    titleDescription.textContent = film.title;
+    titleDescription.textContent = film.title || film.properties.title;
     const directorDescription = document.createElement("p");
-    directorDescription.textContent = film.director;
+    directorDescription.textContent = film.director || film.properties.director;
     const producerDescription = document.createElement("p");
-    producerDescription.textContent = film.producer;
+    producerDescription.textContent = film.producer || film.properties.producer;
     const releaseDateDescription = document.createElement("p");
     releaseDateDescription.textContent = `${formattedDate}`;
     const episodeDescription = document.createElement("p");
-    episodeDescription.textContent = film.episode_id;
+    episodeDescription.textContent =
+      film.episode_id || film.properties.episode_id;
 
     //applying classes
     card.classList.add("display-card");

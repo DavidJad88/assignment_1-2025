@@ -8,6 +8,7 @@ const renderPeople = (people) => {
     const personImage = peopleImageArray.find(
       (img) => img.name === person.name
     );
+
     //creating elements
 
     const card = document.createElement("li");
@@ -45,17 +46,17 @@ const renderPeople = (people) => {
     massHeader.textContent = "Mass";
 
     const nameDescription = document.createElement("p");
-    nameDescription.textContent = person.name;
+    nameDescription.textContent = person.name || "N/A";
     const birthYearDescription = document.createElement("p");
-    birthYearDescription.textContent = person.birth_year;
+    birthYearDescription.textContent = person.birth_year || "N/A";
     const heightDescription = document.createElement("p");
-    heightDescription.textContent = person.height;
+    heightDescription.textContent = person.height || "N/A";
     const eyeColorDescription = document.createElement("p");
-    eyeColorDescription.textContent = person.eye_color;
+    eyeColorDescription.textContent = person.eye_color || "N/A";
     const genderDescription = document.createElement("p");
-    genderDescription.textContent = person.gender;
+    genderDescription.textContent = person.gender || "N/A";
     const massDescription = document.createElement("p");
-    massDescription.textContent = person.mass;
+    massDescription.textContent = person.mass || "N/A";
     //applying classes
     card.classList.add("display-card");
     cardImageContainer.classList.add("card__image-container");

@@ -42,17 +42,17 @@ const renderPlanets = (planets) => {
     diameterHeader.textContent = "Diameter";
 
     const nameDescription = document.createElement("p");
-    nameDescription.textContent = planet.name;
+    nameDescription.textContent = planet.name || "N/A";
     const climateDescription = document.createElement("p");
-    climateDescription.textContent = planet.climate;
+    climateDescription.textContent = planet.climate || "N/A";
     const terrainDescription = document.createElement("p");
-    terrainDescription.textContent = planet.terrain;
+    terrainDescription.textContent = planet.terrain || "N/A";
     const populationDescription = document.createElement("p");
-    populationDescription.textContent = planet.population;
+    populationDescription.textContent = planet.population || "N/A";
     const gravtyDescription = document.createElement("p");
-    gravtyDescription.textContent = planet.gravity;
+    gravtyDescription.textContent = planet.gravity || "N/A";
     const diameterDescription = document.createElement("p");
-    diameterDescription.textContent = planet.diameter;
+    diameterDescription.textContent = planet.diameter || "N/A";
     //applying classes
     card.classList.add("display-card");
     cardImageContainer.classList.add("card__image-container");
